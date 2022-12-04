@@ -23,6 +23,17 @@ public class Program2 {
 		for(Department d : list) {
 			System.out.println(d);
 		}
+		
+		System.out.println("===TEST 3: Department FindById===");
+		department = departmentDao.findById(4);
+		System.out.println(department);
+		
+		System.out.println("===TEST 3: Department Update===");
+		department = departmentDao.findById(5);
+		department.setName("Kitchen");
+		departmentDao.update(department);
+		System.out.println("Update completed!");
+		
 
 	}
 
