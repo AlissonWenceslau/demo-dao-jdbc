@@ -28,12 +28,15 @@ public class Program2 {
 		department = departmentDao.findById(4);
 		System.out.println(department);
 		
-		System.out.println("===TEST 3: Department Update===");
+		System.out.println("===TEST 4: Department Update===");
 		department = departmentDao.findById(5);
 		department.setName("Kitchen");
 		departmentDao.update(department);
 		System.out.println("Update completed!");
 		
+		System.out.println("===TEST 5: Department Delete===");
+		departmentDao.deleteById(5);
+		System.out.println("Delete completed!");
 
 	}
 
